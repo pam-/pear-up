@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+'ruby' '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -14,6 +14,18 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+group :development, :test do
+  gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'rspec-its',  ">= 1.0.1"
+  gem 'factory_girl_rails', '4.4.0'
+  gem 'launchy'
+end
+
+group :test do
+	gem 'selenium-webdriver', '2.41.0'
+	gem 'capybara', '2.2.1'
+end
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -25,6 +37,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+gem 'rails_12factor', group: :production
+
+gem 'devise'
+
+gem 'paperclip'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
