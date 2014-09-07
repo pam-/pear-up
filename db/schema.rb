@@ -17,11 +17,17 @@ ActiveRecord::Schema.define(version: 20140906173147) do
   enable_extension "plpgsql"
 
   create_table "pairings", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",                 null: false
+    t.integer  "partner_id",              null: false
     t.string   "message"
+    t.string   "status",     default: "", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pairings", ["partner_id"], name: "index_pairings_on_partner_id", using: :btree
+  add_index "pairings", ["user_id", "partner_id"], name: "index_pairings_on_user_id_and_partner_id", using: :btree
+  add_index "pairings", ["user_id"], name: "index_pairings_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false

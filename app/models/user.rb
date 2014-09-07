@@ -5,7 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :pairings
-  has_many :partners, through: :pairings
-
-  has_many :pairing_requests, through: :pairings 
+  has_many :partners, through: :pairings, source: :partner
 end

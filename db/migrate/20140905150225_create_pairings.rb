@@ -1,10 +1,16 @@
 class CreatePairings < ActiveRecord::Migration
   def change
     create_table :pairings do |t|
-    	t.references :user
+    	t.integer :user_id, null: false
+    	t.integer :partner_id, null: false
     	t.string :message
+    	t.string :status, null: false, default: "" #pending requested or confirmed => helps see who sent request
 
     	t.timestamps
     end
+
+    add_index :pairings, :user_id
+    add_index :pairings, :partner_id
+    add_index :pairings, [:user_id, :partner_id]
   end
 end
