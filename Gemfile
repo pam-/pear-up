@@ -25,6 +25,7 @@ end
 group :test do
 	gem 'selenium-webdriver', '2.41.0'
 	gem 'capybara', '2.2.1'
+	gem 'database_cleaner'
 end
 
 # Use jquery as the JavaScript library

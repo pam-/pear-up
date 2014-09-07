@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe UsersLanguage do
+
 	let(:user) { FactoryGirl.create(:user) }
-	let(:ruby) { FactoryGirl.create(:language, name: 'Ruby') }
+	let(:ruby) { FactoryGirl.create(:language) }
 	let(:python) { FactoryGirl.create(:language, name: 'Python') }
 
 	describe ".create" do
