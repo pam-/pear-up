@@ -1,0 +1,6 @@
+<% @languages.each do |language| %>
+<div id="<%= language.name %>">
+	<%= link_to language.name, language_path(language) %>
+</div> 
+
+<% end %> 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#sign_in'
+  root 'languages#index'
 
   devise_for :users
   
