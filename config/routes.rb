@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
   resources :languages #, only: [:index, :show]
   resources :users, only: [:show]
+  resources :pairing#, only: [:create, :destroy]
 
 end

@@ -1,12 +1,13 @@
 <% @users.each do |user| %>
 <div>
+
 	<!-- show users who listed this particular language -->
 	<%= user.name %> 
 	<%#= user.avatar %>
-	<%= user.language %> 
-	 
-</div>
+	<%= link_to(user_path(user)) do %>
+		<%= image_tag user.avatar(:thumb) %> 
+	<% end %>
+	<!-- request redirect to page where you can send message and invite -->
 
-<div>
-
 </div>
+<% end %>

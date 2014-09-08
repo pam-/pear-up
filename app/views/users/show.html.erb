@@ -1,0 +1,14 @@
+	<% unless current_user == @partner %>
+		<%= form_for @pairing_request do |f| %>
+			<%= f.submit 'Request Pairing'  %>   
+		<% end %>
+	<% else %>
+		<% @pairings.each do |pairing| %>
+			<%= pairing.partner.name %> 
+		<% end %>
+		<%#= form_for @pairing_confirm do |f| %>
+			<%#= @potential_partner.avatar %>
+			<%#= f.submit 'Accept' %>
+		<%# end %>
+	<%# end %>
+	<% end %>

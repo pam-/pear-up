@@ -12,7 +12,7 @@ class Pairing < ActiveRecord::Base
   end
 
   def self.request(user, partner)
-  	unless user == partner || self.exists?(user_id: user.id, partner_id: partner.id, status: 'accepted')
+  	unless user == partner || self.exists?(user_id: user.id, partner_id: partner.id, status: 'pending') || self.exists?(user_id: user.id, partner_id: partner.id, status: 'accepted')
 	  	# transaction block used when multiple statements need to be executed together or not at all
 	  	transaction do 
 	  		self.create!(user_id: user.id, partner_id: partner.id, status: 'pending')
