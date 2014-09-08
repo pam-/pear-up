@@ -1,0 +1,6 @@
+<header> 
+	<% if user_signed_in? %>
+		<%= link_to 'sign out', sign_out_path, method: :delete %> 
+		<%= link_to 'my profile', user_path(current_user) %>
+	<% end %> 
+</header>
