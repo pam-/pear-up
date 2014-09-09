@@ -1,8 +1,14 @@
-<% unless current_user == @partner %>
-	<%= link_to 'Wanna pear?', pairing_index_path(partner_id: @partner), method: :post  %>   
+<%= render 'info' %>
+
+<% unless current_user == @partner || current_user.partners.include?(@partner) %>
+	<%= link_to 'Wanna pear?', pairing_index_path(partner_id: @partner), method: :post  %>
 <% else %>
-	<% @pairings.each do |pairing| %>
-		<%= link_to pairing.partner.avatar, user_path(pairing.partner) %>
-		<%= link_to pairing.partner.name, pairing_confirm_path(pairing_id: pairing.id, partner_id: pairing.partner.id), method: :post %>
-	<% end %>	
+	<% if current_user == @partner %>
+		<% if @requests.any? %>
+			<%= render 'requests' %>
+		<% end %>	
+		<% if current_user.partners.any? %>
+			<%= render 'partners' %>
+		<% end %>
+	<% end %>
 <% end %>

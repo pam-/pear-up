@@ -1,9 +1,9 @@
 <header> 
-	<h1> Pear up </h1>
+	<h1> <%= link_to 'Pear up', '/' %> </h1>
 	<ul>
 		<% if user_signed_in? %>
-			<li><%= link_to 'sign out', sign_out_path, method: :delete %></li>
-			<li><%= link_to 'my profile', user_path(current_user) %></li>
+			<li><%= link_to 'sign out', sign_out_path, method: :delete %></li> |
+			<li><%= link_to 'my profile', user_path(current_user) %></li> |
 			<li><%= link_to 'Browse', languages_path %></li>
 	<% end %> 
 	</ul>

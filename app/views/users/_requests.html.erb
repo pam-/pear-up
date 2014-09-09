@@ -1,0 +1,5 @@
+<h2> My Pear Requests (<%= @requests.count %>) </h2>
+<% @requests.each do |request| %>
+	<%= link_to request.partner.avatar, user_path(request.partner) %>
+	<%= link_to "confirm with #{request.partner.name}", request_confirm_path(pairing_id: request.id, partner_id: request.partner.id), method: :post %>
+<% end %>

@@ -1,0 +1,5 @@
+<h2> My Pears (<%= current_user.partners.count %>) </h2>
+<% current_user.partners.each do |partner| %>
+	<%= image_tag partner.avatar(:thumb) %>
+	<%= link_to partner.name, user_path(partner) %>
+<% end %>

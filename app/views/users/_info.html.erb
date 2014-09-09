@@ -1,0 +1,5 @@
+<%= @partner.name %> 
+<%= image_tag @partner.avatar(:thumb) %>
+<% @partner.languages do |language| %>
+	<%= language.name %>
+<% end %>

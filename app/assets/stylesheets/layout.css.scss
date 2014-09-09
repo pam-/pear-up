@@ -1,0 +1,56 @@
+body {
+	font-family: 'Century Gothic';
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+header{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 80px;
+	padding: 10px;
+	border-bottom: 1px solid #efefef;
+	h1{
+		width: 30%;
+		float: left;
+		margin: 0;
+	}
+	ul{
+		float: right;
+		list-style: none;
+		padding-left: 0;
+		li{
+			display: inline-block;
+		}
+	}
+}
+header:after{
+	content: " ";
+	clear: both;
+	display: block;
+}
+
+.index {
+	clear: both;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	.lang-box{
+		text-align: center;
+		width: 20%;
+		padding-top: 80px; padding-bottom: 80px;
+		display: inline-block;
+		margin: 10px;
+	}
+	#ruby{
+		background-color: red;
+	}
+	#rubyonrails{
+		/*background-color: ;*/
+	}
+}
+
+
+
