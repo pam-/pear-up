@@ -1,17 +1,28 @@
 class PairingController < ApplicationController
 
 	def create
-		# @user = current_user
-		# @partner = User.find(params[:id])
-		# @pairing = Pairing.request(@user, @partner)
-		redirect_to user_path(@user)
+		@user = current_user
+		@partner = User.find(params[:partner_id])
+		@pairing = Pairing.request(@user, @partner)
+
+		if @pairing.save
+			redirect_to user_path(@partner)
+			flash[:success] = "Successfully sent..."
+		else 
+			flash[:error] = "Successfully created..."
+		end
 	end
 
-	def update
-		@pairing = Pairing.find(params[:id])
-		@partner = @pairing.partner 
-		@user = @pairing.user
-		redirect_to user_path(@user)
+	def confirm
+		@user = current_user
+		@partner = User.find(params[:partner_id])
+		
+		if @pairing = Pairing.confirm(@user, @partner)
+			redirect_to user_path(@user)
+			flash[:success] = "Successfully created..."
+		else 
+			flash[:error] = "Successfully created..."
+		end		
 	end
 
 	def destroy

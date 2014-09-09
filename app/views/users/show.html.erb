@@ -1,14 +1,8 @@
-	<% unless current_user == @partner %>
-		<%= form_for @pairing_request do |f| %>
-			<%= f.submit 'Request Pairing'  %>   
-		<% end %>
-	<% else %>
-		<% @pairings.each do |pairing| %>
-			<%= pairing.partner.name %> 
-		<% end %>
-		<%#= form_for @pairing_confirm do |f| %>
-			<%#= @potential_partner.avatar %>
-			<%#= f.submit 'Accept' %>
-		<%# end %>
-	<%# end %>
-	<% end %>
+<% unless current_user == @partner %>
+	<%= link_to 'Wanna pear?', pairing_index_path(partner_id: @partner), method: :post  %>   
+<% else %>
+	<% @pairings.each do |pairing| %>
+		<%= link_to pairing.partner.avatar, user_path(pairing.partner) %>
+		<%= link_to pairing.partner.name, pairing_confirm_path(pairing_id: pairing.id, partner_id: pairing.partner.id), method: :post %>
+	<% end %>	
+<% end %>

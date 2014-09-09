@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   end 
 
   resources :languages #, only: [:index, :show]
-  resources :users, only: [:show]
-  resources :pairing#, only: [:create, :destroy]
+  resources :users, only: [:show]  
+  resources :pairing, only: [:create] do 
+  	post '/confirm', to: 'pairing#confirm'
+  end 
+
+ 
 
 end

@@ -1,0 +1,5 @@
+<% unless @pairing_confirmed %>
+	<%= form_for @pairing_confirm do |f| %>
+		<%= f.submit 'Confirm Pairing'  %>   
+	<% end %>
+<% end %>
