@@ -18,8 +18,8 @@ class Pairing < ActiveRecord::Base
 	  		self.create!(user_id: user.id, partner_id: partner.id, status: 'pending')
 	  		self.create!(user_id: partner.id, partner_id: user.id, status: 'requested')
 	  	end 
-	  else 
-	  	return 'failed'
+	  # else 
+	  # 	return 'failed'
 	  end 
   end
 
@@ -29,8 +29,8 @@ class Pairing < ActiveRecord::Base
   			one_side_confirmation(user, partner)
   			one_side_confirmation(partner, user)
   		end 
-  	else 
-  		return 'failed'
+  	# else 
+  	# 	return 'failed'
   	end
   end
 

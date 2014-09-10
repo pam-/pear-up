@@ -1,5 +1,33 @@
-<%= @partner.name %> 
-<%= image_tag @partner.avatar(:thumb) %>
-<% @partner.languages do |language| %>
-	<%= language.name %>
-<% end %>
+
+	<%= image_tag @partner.avatar(:medium) %>
+<%# if @partner.languages.any? %>
+<div class="right">	
+	<h2> <%= @partner.name.upcase %> </h2>
+	<h4> wants to code in: </h4>
+	<ul>
+		<% @partner.languages.each do |language| %>
+			<li> <%= link_to language.name, language_path(language) %> </li>
+		<% end %> 
+	</ul>
+	<h4> lives in: </h4>
+	<%= @partner.location %>
+
+	<% if current_user == @partner %>
+		<div>
+			<h4> Add a language: </h4>
+			<ul>
+				<% @languages.each do |language| %>
+					<% unless current_user.languages.include?(language) %>
+						<li> <%= link_to language.name, users_languages_path(language_id: language.id), method: :post %> </li>
+						<% end %>
+				<% end %>
+			</ul>
+		</div>
+		<h4> <%= link_to 'Edit Profile', edit_user_registration_path(current_user) %> </h4>
+	<% end %> 
+		<% unless current_user == @partner || current_user.partners.include?(@partner) %>
+		<div class="request"> <h2> <%= link_to "Pear Up!", pairing_index_path(partner_id: @partner), method: :post  %> </h2>
+		</div>
+		<% end %>
+</div>
+

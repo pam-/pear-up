@@ -5,11 +5,12 @@ class PairingController < ApplicationController
 		@partner = User.find(params[:partner_id])
 		@pairing = Pairing.request(@user, @partner)
 
-		if @pairing.save
+		if @pairing
+			flash[:success] = "Request successfully sent!"
 			redirect_to user_path(@partner)
-			flash[:success] = "Successfully sent..."
 		else 
-			flash[:error] = "Successfully created..."
+			flash[:error] = "Partnership already requested!"
+			redirect_to user_path(@partner)
 		end
 	end
 
@@ -18,10 +19,11 @@ class PairingController < ApplicationController
 		@partner = User.find(params[:partner_id])
 		
 		if @pairing = Pairing.confirm(@user, @partner)
+			flash[:success] = "Partnership confirmed!"
 			redirect_to user_path(@user)
-			flash[:success] = "Successfully created..."
 		else 
-			flash[:error] = "Successfully created..."
+			flash[:error] = "Whoops! Something went wrong..."
+			redirect_to user_path(@user)
 		end		
 	end
 

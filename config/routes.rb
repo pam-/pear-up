@@ -10,12 +10,14 @@ Rails.application.routes.draw do
     delete 'sign_out', to: 'devise/sessions#destroy'
   end 
 
-  resources :languages #, only: [:index, :show]
-  resources :users, only: [:show]  
+  resources :languages
+  resources :users, only: [:show]  do
+  	resources :messages
+  end 
   resources :pairing, only: [:create] do 
   	post '/confirm', to: 'pairing#confirm'
   end 
+  resources :users_languages, only: [:create, :destroy]
 
- 
 
 end

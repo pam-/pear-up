@@ -10,8 +10,8 @@ class UsersLanguage < ActiveRecord::Base
   		transaction do 
   			create!(language_id: language.id, user_id: user.id)
   		end
-  	else 
-  		return 'failed'
+  	# else 
+  	# 	return 'failed'
   	end
   end
 

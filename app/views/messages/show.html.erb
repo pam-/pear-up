@@ -1,0 +1,7 @@
+<section class="message-show">
+	<h2> <%= @message.title %> </h2>
+	<p> <%= @message.body %> </p>
+
+	<h4> <%= link_to 'Reply', new_user_message_path(user_id: current_user.id) %> </h4>
+
+</section>

@@ -1,7 +1,9 @@
 <section class="index">
+	<h1> Choose a pairing language: </h1>
 	<% @languages.each do |language| %>
-		<div class = "lang-box" id="<%= language.name.downcase.split.join %>">
-			<%= link_to language.name, language_path(language) %>
-		</div> 
+		<a href="<%= language_path(language)  %>">	<div class = "lang-button" id="<%= language.name.downcase.split.join %>">
+				<%= language.name.upcase %>
+			</div> 
+		</a>
 	<% end %> 
 </section>

@@ -1,14 +1,18 @@
-<%= render 'info' %>
+<%= render 'shared/flash' %> 
+<section class="user-show">
 
-<% unless current_user == @partner || current_user.partners.include?(@partner) %>
-	<%= link_to 'Wanna pear?', pairing_index_path(partner_id: @partner), method: :post  %>
-<% else %>
-	<% if current_user == @partner %>
-		<% if @requests.any? %>
-			<%= render 'requests' %>
-		<% end %>	
-		<% if current_user.partners.any? %>
-			<%= render 'partners' %>
-		<% end %>
+	<%= render 'info' %>
+
+	<%# else %>
+		<% if current_user == @partner %>
+		<div class="pairings">
+			<%# if @requests.any? %>
+				<%= render 'requests' %>
+			<%# end %>	
+			<%# if current_user.partners.any? %>
+				<%= render 'partners' %>
+			<%# end %>
+		</div>
+		<%# end %>
 	<% end %>
-<% end %>
+</section>

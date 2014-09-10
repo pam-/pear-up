@@ -1,4 +1,6 @@
-	<%= form_for @language do |f| %>
-		<%= f.text_field :name %>
+<section class="lang-form">
+	<%= form_for @language do |f| %> <br>
+		<%= f.text_field :name %><br>
 		<%= f.submit 'Create language' %>
 	<% end %>
+</section>

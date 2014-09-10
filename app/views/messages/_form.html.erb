@@ -1,0 +1,23 @@
+<%= form_for [current_user, @message] do |f| %>
+	<% if @message.errors.any? %> 
+		<div>
+			<ul>
+				<li><%= @message.errors.full_message %></li>
+			</ul> 
+		</div>
+	<% end %>
+	<div>
+		<%= f.label 'Choose recipient' %> <br>
+		<%= f.collection_select :recipient_id, current_user.partners, :id, :name %>
+	</div>
+
+	<div>
+		<%= f.text_field :title, placeholder: 'Enter subject' %> 
+	</div> 
+	<div>
+		<%= f.text_area :body, placeholder: 'Type message here' %>
+	</div>
+	<div>
+		<%= f.submit 'Send Message' %>
+	</div>
+<% end %>

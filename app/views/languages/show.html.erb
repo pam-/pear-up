@@ -1,13 +1,17 @@
-<% @users.each do |user| %>
-<div>
+<%= render 'shared/flash' %> 
+<section class="lang-show"> 
+	<h2> <%= pluralize(@language.users.count, "Pear") %> in the <%= @language.name %> Room </h2>
+	<% @users.each do |user| %>
+		<div>
 
-	<!-- show users who listed this particular language -->
-	<%= user.name %> 
-	<%#= user.avatar %>
-	<%= link_to(user_path(user)) do %>
-		<%= image_tag user.avatar(:thumb) %> 
+			<!-- show users who listed this particular language -->
+			<%#= user.avatar %>
+			<%= link_to(user_path(user)) do %>
+				<%= image_tag user.avatar(:thumb) %>
+				<p><%= user.name.capitalize %> </p> 
+			<% end %>
+			<!-- request redirect to page where you can send message and invite -->
+
+		</div>
 	<% end %>
-	<!-- request redirect to page where you can send message and invite -->
-
-</div>
-<% end %>
+</section>

@@ -16,6 +16,8 @@ describe User do
 	it { should have_many(:languages) }
 	it { should have_many(:pairings) }
 	it { should have_many(:partners) }
+	it { should have_many(:sent_messages) }
+	it { should have_many(:received_messages) }
 
 	it { should validate_presence_of(:name) }
 	it { should validate_presence_of(:location) }
