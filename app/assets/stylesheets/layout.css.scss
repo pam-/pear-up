@@ -294,6 +294,9 @@ header:after{
 		width: 50%;
 		/*border-left: 1px solid $accent;*/
 	}
+	a:hover{
+		color: $accent;
+	}
 }
 .inbox:after{
 	content: "";
@@ -347,6 +350,9 @@ footer{
 	@include width-80;
 	bottom: 0;
 	text-align: center;
+	a{
+		color: $accent;
+	}
 }
 
 // flash notices 
