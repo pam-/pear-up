@@ -1,6 +1,8 @@
 <div class="partners"> 
 	<h2> My Pears <small> (<%= current_user.partners.count %>) </small> </h2>
 <% current_user.partners.each do |partner| %>
-	<%= image_tag partner.avatar(:thumb) %>
+	<%= link_to user_path(partner) do %>
+		<%= image_tag partner.avatar(:thumb) %>
+	<% end %>
 <% end %>
 </div>
