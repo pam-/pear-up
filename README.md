@@ -34,7 +34,7 @@ Complete list of user stories [here](https://www.pivotaltracker.com/s/projects/1
 
 **ERD**
 
-
+![](project_1_erd.png)
 
 Set up
   
