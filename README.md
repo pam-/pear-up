@@ -4,7 +4,7 @@
 
 **Overview**
 
-Pears is where any programmer can find other programmers near their location, send them pairing requests and meet up to code in person. 
+Pears is an app where programmers can find other programmers near them, send them pairing requests and meet up to code. 
 
 [Visit Pears](http://codingpears.herokuapp.com)
 
