@@ -36,6 +36,12 @@ Complete list of user stories [here](https://www.pivotaltracker.com/s/projects/1
 
 ![](project_1_erd.png)
 
+**What's next?**
+- Location and distance tracker
+- Styling 
+- Testing
+- Refactoring
+
 Set up
   
     rake db:create
