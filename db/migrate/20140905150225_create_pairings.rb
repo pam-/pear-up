@@ -4,7 +4,7 @@ class CreatePairings < ActiveRecord::Migration
     	t.integer :user_id, null: false
     	t.integer :partner_id, null: false
     	t.string :message
-    	t.string :status, null: false, default: "" #pending requested or confirmed => helps see who sent request
+    	t.string :status, null: false, default: "" #pending requested or confirmed => helps see who sent request and who ahs to confirm it  
 
     	t.timestamps
     end

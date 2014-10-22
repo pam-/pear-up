@@ -26,19 +26,20 @@ body {
 }
 
 header{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 80px;
-	padding: 8px;
+	// padding: 8px;
 	/*background: */
 	/*color: #fff;*/
-	border-bottom: 1px solid rgba(47,47,47,0.98);
+	// border-bottom: 1px solid rgba(47,47,47,0.98);
 	.left-header{
 		width: 30%;
 		float: left;
 		margin: 0;
 		h1{
 			margin: 0;
+			font-size: 25px;
 			margin-top: -10px;
 			font-weight: lighter;
 			display: inline-block;
