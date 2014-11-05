@@ -1,24 +1,23 @@
+$main-color: #efefef;
+$accent: rgba(255, 0,0,0.7);
+
 @mixin width-80{
 	width: 80%;
 	margin: 0 auto;
 }
 @mixin submit-button{
 	border-radius: 10px;
-	background-color: rgba(255,0,0, 0.7);
-	border: 1px solid rgba(255,0,0, 0.7);
+	background-color: $accent;
+	border: 1px solid $accent;
 	padding: 10px;
 	margin: 20px;
 	-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 3px 0px 0px #C40202, 0px 8px 5px #999;
 }
 
-$main-color: #efefef;
-$accent: rgba(255, 0,0,0.7);
-
-
 body {
 	font-family: 'Century Gothic';
 	/*background: #efefef;*/
-	padding: 20px;
+	// padding: 200px;
 	a{
 		text-decoration: none;
 		color: inherit;
@@ -29,10 +28,10 @@ header{
 	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 80px;
-	// padding: 8px;
-	/*background: */
-	/*color: #fff;*/
-	// border-bottom: 1px solid rgba(47,47,47,0.98);
+	padding-top: 8px;
+	// background: grey; 
+	// color: #fff;
+	// -webkit-box-shadow:
 	.left-header{
 		width: 30%;
 		float: left;
