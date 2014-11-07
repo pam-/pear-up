@@ -1,12 +1,16 @@
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet'/>
 <section class="index">
-	<!-- <h1> Choose a pairing language: </h1> -->
-	<%# @languages.each do |language| %>
-<!-- 		<a href="<%#= language_path(language)  %>">	<div class = "lang-button" id="<%#= language.name.downcase.split.join %>">
+	<aside>
+		<h1> Choose a pairing language: </h1>
+			<%# @languages.each do |language| %>
+				<!-- <a href="<%#= language_path(language)  %>">	 -->
+					<!-- <div class = "lang-button" id="<%#= language.name.downcase.split.join %>"> -->
 				<%#= language.name.upcase %>
-			</div> 
-		</a> -->
-	<%# end %> 
-
-	<!-- <div id="map"></div> -->
+					<!-- </div>  -->
+				<!-- </a> -->
+			<%# end %> 
+	</aside>
+	<div id="map"></div>
 
 </section>
