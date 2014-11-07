@@ -14,8 +14,9 @@ $accent: rgba(255, 0,0,0.7);
 	-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 3px 0px 0px #C40202, 0px 8px 5px #999;
 }
 
-body {
+html,body {
 	font-family: 'Century Gothic';
+	height: 100%;
 	/*background: #efefef;*/
 	// padding: 200px;
 	a{
@@ -59,6 +60,13 @@ header:after{
 	content: " ";
 	clear: both;
 	display: block;
+}
+
+.wrapper{
+	min-height: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto -4em;
 }
 
 // language index
@@ -344,15 +352,16 @@ header:after{
 
 // footer
 
-footer{
+.sticky-footer{
 	clear: both;
-	margin-top: 20px;
 	@include width-80;
-	bottom: 0;
+	position: relative;
+	height: 4em;
+	margin: -4em auto 0;
 	text-align: center;
 	a{
 		color: $accent;
-	}
+	}	
 }
 
 // flash notices 

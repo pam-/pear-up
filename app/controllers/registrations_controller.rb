@@ -7,6 +7,10 @@ class RegistrationsController < Devise::RegistrationsController
 		user_path(current_user)
 	end
 
+  # def after_sign_in_path_for(resource)
+  #   current_user_path
+  # end
+
   def configure_permitted_parameters
   	devise_parameter_sanitizer.for(:sign_up) do |user|
   		user.permit(:avatar, :name, :location, :email, :password, :password_confirmation)
