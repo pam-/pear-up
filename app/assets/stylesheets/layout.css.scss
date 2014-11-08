@@ -17,376 +17,377 @@ $accent: rgba(255, 0,0,0.7);
 html,body {
 	font-family: 'Century Gothic';
 	height: 100%;
-	/*background: #efefef;*/
-	// padding: 200px;
 	a{
 		text-decoration: none;
 		color: inherit;
 	}
-}
-
-header{
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	padding-top: 8px;
-	.left-header{
-		width: 30%;
-		float: left;
-		margin: 0;
-		h1{
-			margin: 0;
-			font-size: 25px;
-			margin-top: -10px;
-			font-weight: lighter;
-			display: inline-block;
-			font-family: 'Dancing Script', cursive;
-		}
-	}
 	ul{
-		margin:0;
-		float: right;
 		list-style: none;
-		padding-left: 0;
-		li{
-			display: inline-block;
-		}
-	}
-}
-header:after{
-	content: " ";
-	clear: both;
-	display: block;
-}
-
-.wrapper{
-	min-height: 100%;
-	height: 100%;
-	position: relative;
-	margin: 0 auto -4em;
-}
-
-// language index
-
-.index {
-	@include width-80;
-	clear: both;
-	text-align: center;
-	&:after{
-		content: "";
-		display: block;
-		clear: both;
-	}
-	.lang-button{
-		text-align: center;
-		width: 200px;
-		padding-top: 80px; padding-bottom: 80px;
-		display: inline-block;
-		margin: 40px;
-		cursor: pointer;
-		border-radius: 8px;
-		font-weight: bolder;
-		font-size: 25px; 
-		letter-spacing: 1px;
-	}
-	#map{
-		width: 100%;
-		height: 450px;
-	}
-	aside{
-		position: absolute;
-		z-index: 1;
-		right: 0;
-	}
-
-	#ruby{
-		color: #fff;
-		background-color: rgba(255,0,0,0.8);
-		-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 5px 0px 0px #C40202, 0px 10px 5px #999;
-	}
-	#ruby:active{
-		top: 3px;
-		-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 2px 0px 0px #C40202, 0px 5px 3px #999; 
-	}
-	#python{
-		color: #5D87E8;
-		background-color: rgba(255,255,0,0.6);
-		-webkit-box-shadow: inset 0px 0px 0px #C2AD11, 0px 5px 0px 0px #C2AD11, 0px 10px 5px #999;
-	}
-	#python:active{
-		top: 3px;
-		-webkit-box-shadow: inset 0px 0px 0px #C2AD11, 0px 2px 0px 0px #C2AD11, 0px 5px 3px #999; 
-	}
-	#html5{
-		color: #000;
-		background-color: rgba(255,69,0,0.8);
-		-webkit-box-shadow: inset 0px 0px 0px #DB3B00, 0px 5px 0px 0px #DB3B00, 0px 10px 5px #999;
-	}
-	#html5:active{
-		top: 3px;
-		-webkit-box-shadow: inset 0px 0px 0px #DB3B00, 0px 2px 0px 0px #DB3B00, 0px 5px 3px #999; 
-	}	
-	#css3{
-		color: #fff;
-		background-color: rgba(0,191,255,0.8);
-		-webkit-box-shadow: inset 0px 0px 0px #008DBD, 0px 5px 0px 0px #008DBD, 0px 10px 5px #999;
-	}
-	#css3:active{
-		top: 3px;
-		-webkit-box-shadow: inset 0px 0px 0px #008DBD, 0px 2px 0px 0px #008DBD, 0px 5px 3px #999; 
-	}
-	#rails{
-		color: #fff;
-		background-color: rgba(199,0,0,0.8);
-		-webkit-box-shadow: inset 0px 0px 0px #A80000, 0px 5px 0px 0px #A80000, 0px 10px 5px #999;
-	}
-	#rails:active{
-		top: 3px;
-		-webkit-box-shadow: inset 0px 0px 0px #A80000, 0px 2px 0px 0px #A80000, 0px 5px 3px #999; 
 	}
 }
 
-// user show page 
+// header{
+// 	width: 100%;
+// 	margin: 0 auto;
+// 	margin-bottom: 30px;
+// 	padding-top: 8px;
+// 	.left-header{
+// 		width: 30%;
+// 		float: left;
+// 		margin: 0;
+// 		h1{
+// 			margin: 0;
+// 			font-size: 25px;
+// 			margin-top: -10px;
+// 			font-weight: lighter;
+// 			display: inline-block;
+// 			font-family: 'Dancing Script', cursive;
+// 		}
+// 	}
+// 	ul{
+// 		margin:0;
+// 		float: right;
+// 		list-style: none;
+// 		padding-left: 0;
+// 		li{
+// 			display: inline-block;
+// 		}
+// 	}
+// }
+// header:after{
+// 	content: " ";
+// 	clear: both;
+// 	display: block;
+// }
 
-.user-show{
-	width: 70%;
-	margin: 0 auto;
-	/*text-align: center;*/
-	img{
-			border-radius: 20px;
-			float: left;
-		}
-	.right{
-		float: right;
-		margin-bottom: 20px;
-		text-align: center;
-		padding: 20px;
-		width: 40%;
-		border-radius: 10px; 
-		border: 1px solid $main-color;
-		p{
-		font-size: 20px;
-		}
-		h2{
-			font-size: 40px;
-		}
-		ul{
-			list-style: none;
-			padding-left: 0;
-			li{
-				letter-spacing: 1px;
-				/*font-weight: bold;*/
-				border-radius: 5px;
-				text-align: center;
-				margin: 15px 0;
-				padding: 5px;
-				border:1px solid $accent;
-			}
-		}
-	}
-	.pairings{
-		float: left;
-		padding: 50px 0;
-		width: 40%;
+// .wrapper{
+// 	min-height: 100%;
+// 	height: 100%;
+// 	position: relative;
+// 	margin: 0 auto -4em;
+// }
 
-		.requests{
-			width: 100%;
-			display: inline-block;
-			margin: 10px;
-			img{
-				width: 100px;
-				display: block;
-				margin-right: 20px;
-				margin-bottom: 25px;
-				clear: both;
-			}
-			p{
-				@include submit-button;
-				float: right;
-				width: 80px;
-				text-align: center;
-			}
-		}
-		.partners{
-			width: 100%;
-			display: inline-block;
-			margin: 10px;
-			img{
-				width: 100px;
-				display: block;
-				margin-right: 20px;
-				float: left;
-			}
-		}
-	}
-	.request{
-		@include submit-button;
-		padding: 0;
-		text-align: center;
-		display: block;
-	}
-}
+// // language index
 
-// language show
+// .index {
+// 	@include width-80;
+// 	clear: both;
+// 	text-align: center;
+// 	&:after{
+// 		content: "";
+// 		display: block;
+// 		clear: both;
+// 	}
+// 	.lang-button{
+// 		text-align: center;
+// 		width: 200px;
+// 		padding-top: 80px; padding-bottom: 80px;
+// 		display: inline-block;
+// 		margin: 40px;
+// 		cursor: pointer;
+// 		border-radius: 8px;
+// 		font-weight: bolder;
+// 		font-size: 25px; 
+// 		letter-spacing: 1px;
+// 	}
+// 	#map{
+// 		width: 100%;
+// 		height: 450px;
+// 	}
+// 	aside{
+// 		position: absolute;
+// 		z-index: 1;
+// 		right: 0;
+// 	}
 
-.lang-show {
-	@include width-80;
-	h2{
-		text-align: center;
-	}
-	div{
-		width: 10%;
-		padding: 20px;
-		float: left;
-		img{
-			width: 100%;
-			margin: 0 auto;
-			border-radius: 10px;
-		}
-		p{
-			text-align: center;
-			font-weight: bolder;
-		}
-	}
-}
+// 	#ruby{
+// 		color: #fff;
+// 		background-color: rgba(255,0,0,0.8);
+// 		-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 5px 0px 0px #C40202, 0px 10px 5px #999;
+// 	}
+// 	#ruby:active{
+// 		top: 3px;
+// 		-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 2px 0px 0px #C40202, 0px 5px 3px #999; 
+// 	}
+// 	#python{
+// 		color: #5D87E8;
+// 		background-color: rgba(255,255,0,0.6);
+// 		-webkit-box-shadow: inset 0px 0px 0px #C2AD11, 0px 5px 0px 0px #C2AD11, 0px 10px 5px #999;
+// 	}
+// 	#python:active{
+// 		top: 3px;
+// 		-webkit-box-shadow: inset 0px 0px 0px #C2AD11, 0px 2px 0px 0px #C2AD11, 0px 5px 3px #999; 
+// 	}
+// 	#html5{
+// 		color: #000;
+// 		background-color: rgba(255,69,0,0.8);
+// 		-webkit-box-shadow: inset 0px 0px 0px #DB3B00, 0px 5px 0px 0px #DB3B00, 0px 10px 5px #999;
+// 	}
+// 	#html5:active{
+// 		top: 3px;
+// 		-webkit-box-shadow: inset 0px 0px 0px #DB3B00, 0px 2px 0px 0px #DB3B00, 0px 5px 3px #999; 
+// 	}	
+// 	#css3{
+// 		color: #fff;
+// 		background-color: rgba(0,191,255,0.8);
+// 		-webkit-box-shadow: inset 0px 0px 0px #008DBD, 0px 5px 0px 0px #008DBD, 0px 10px 5px #999;
+// 	}
+// 	#css3:active{
+// 		top: 3px;
+// 		-webkit-box-shadow: inset 0px 0px 0px #008DBD, 0px 2px 0px 0px #008DBD, 0px 5px 3px #999; 
+// 	}
+// 	#rails{
+// 		color: #fff;
+// 		background-color: rgba(199,0,0,0.8);
+// 		-webkit-box-shadow: inset 0px 0px 0px #A80000, 0px 5px 0px 0px #A80000, 0px 10px 5px #999;
+// 	}
+// 	#rails:active{
+// 		top: 3px;
+// 		-webkit-box-shadow: inset 0px 0px 0px #A80000, 0px 2px 0px 0px #A80000, 0px 5px 3px #999; 
+// 	}
+// }
 
-// user forms 
+// // user show page 
 
-.user-form {
-	@include width-80;
-	text-align: center;
-	h2{
-		text-align: center;
-		letter-spacing: 2px;
-		margin: 20px;
-	}
-	input[type="file"]{
-		margin: 20px;
-		padding-left: 90px;
-	}
-	input[type="text"],
-	input[type="email"],
-	input[type="password"]{
-		margin: 10px;
-		padding: 10px;
-		text-align: center;
-		width: 30%;
-	}
-	input[type="submit"]{
-		@include submit-button;
-	}
-}
+// .user-show{
+// 	width: 70%;
+// 	margin: 0 auto;
+// 	/*text-align: center;*/
+// 	img{
+// 			border-radius: 20px;
+// 			float: left;
+// 		}
+// 	.right{
+// 		float: right;
+// 		margin-bottom: 20px;
+// 		text-align: center;
+// 		padding: 20px;
+// 		width: 40%;
+// 		border-radius: 10px; 
+// 		border: 1px solid $main-color;
+// 		p{
+// 		font-size: 20px;
+// 		}
+// 		h2{
+// 			font-size: 40px;
+// 		}
+// 		ul{
+// 			list-style: none;
+// 			padding-left: 0;
+// 			li{
+// 				letter-spacing: 1px;
+// 				/*font-weight: bold;*/
+// 				border-radius: 5px;
+// 				text-align: center;
+// 				margin: 15px 0;
+// 				padding: 5px;
+// 				border:1px solid $accent;
+// 			}
+// 		}
+// 	}
+// 	.pairings{
+// 		float: left;
+// 		padding: 50px 0;
+// 		width: 40%;
 
-// post form
+// 		.requests{
+// 			width: 100%;
+// 			display: inline-block;
+// 			margin: 10px;
+// 			img{
+// 				width: 100px;
+// 				display: block;
+// 				margin-right: 20px;
+// 				margin-bottom: 25px;
+// 				clear: both;
+// 			}
+// 			p{
+// 				@include submit-button;
+// 				float: right;
+// 				width: 80px;
+// 				text-align: center;
+// 			}
+// 		}
+// 		.partners{
+// 			width: 100%;
+// 			display: inline-block;
+// 			margin: 10px;
+// 			img{
+// 				width: 100px;
+// 				display: block;
+// 				margin-right: 20px;
+// 				float: left;
+// 			}
+// 		}
+// 	}
+// 	.request{
+// 		@include submit-button;
+// 		padding: 0;
+// 		text-align: center;
+// 		display: block;
+// 	}
+// }
 
-.post-form{
-	/*@include width-80;*/
-	div{
-		width: 60%;
-	}
-	input[type="text"],
-	textarea{
-		margin: 5px;
-		width: 100%;
-		padding: 10px;
-	}
-	textarea{
-		height: 400px;
-	}
-	input[type="submit"]{
-		@include submit-button;
-		margin: 5px 0 0 0;
-	}
-}
+// // language show
 
-// messages index
+// .lang-show {
+// 	@include width-80;
+// 	h2{
+// 		text-align: center;
+// 	}
+// 	div{
+// 		width: 10%;
+// 		padding: 20px;
+// 		float: left;
+// 		img{
+// 			width: 100%;
+// 			margin: 0 auto;
+// 			border-radius: 10px;
+// 		}
+// 		p{
+// 			text-align: center;
+// 			font-weight: bolder;
+// 		}
+// 	}
+// }
 
-.inbox{
-	@include width-80;
-	text-align: center;
-	.sent{
-		float: left;
-		width: 50%;
-		/*border-right: 1px solid $accent;*/
-	}
-	.received{
-		float: right;
-		width: 50%;
-		/*border-left: 1px solid $accent;*/
-	}
-	a:hover{
-		color: $accent;
-	}
-}
-.inbox:after{
-	content: "";
-	clear: both;
-	display: block;
-}
+// // user forms 
 
-// message form 
+// .user-form {
+// 	@include width-80;
+// 	text-align: center;
+// 	h2{
+// 		text-align: center;
+// 		letter-spacing: 2px;
+// 		margin: 20px;
+// 	}
+// 	input[type="file"]{
+// 		margin: 20px;
+// 		padding-left: 90px;
+// 	}
+// 	input[type="text"],
+// 	input[type="email"],
+// 	input[type="password"]{
+// 		margin: 10px;
+// 		padding: 10px;
+// 		text-align: center;
+// 		width: 30%;
+// 	}
+// 	input[type="submit"]{
+// 		@include submit-button;
+// 	}
+// }
 
-.message-form{
-	@include width-80;
-	text-align: center;
-	div{
-		width: 60%;
-		margin: 0 auto;
-	}
-	input[type="text"],
-	textarea{
-		margin: 15px;
-		width: 100%;
-		padding: 10px;
-	}
-	textarea{
-		height: 400px;
-	}
-	input[type="submit"]{
-		@include submit-button;
-		margin: 5px 0 0 0;
-	}
-}
+// // post form
 
-// message show
+// .post-form{
+// 	/*@include width-80;*/
+// 	div{
+// 		width: 60%;
+// 	}
+// 	input[type="text"],
+// 	textarea{
+// 		margin: 5px;
+// 		width: 100%;
+// 		padding: 10px;
+// 	}
+// 	textarea{
+// 		height: 400px;
+// 	}
+// 	input[type="submit"]{
+// 		@include submit-button;
+// 		margin: 5px 0 0 0;
+// 	}
+// }
 
-.message-show{
-	@include width-80;
-	text-align: center;
-	h4{
-		@include submit-button;
-		width: 100px;
-		margin: 0 auto;
-	}
-}
+// // messages index
 
-// new language form 
+// .inbox{
+// 	@include width-80;
+// 	text-align: center;
+// 	.sent{
+// 		float: left;
+// 		width: 50%;
+// 		/*border-right: 1px solid $accent;*/
+// 	}
+// 	.received{
+// 		float: right;
+// 		width: 50%;
+// 		/*border-left: 1px solid $accent;*/
+// 	}
+// 	a:hover{
+// 		color: $accent;
+// 	}
+// }
+// .inbox:after{
+// 	content: "";
+// 	clear: both;
+// 	display: block;
+// }
 
-// footer
+// // message form 
 
-.sticky-footer{
-	clear: both;
-	@include width-80;
-	position: relative;
-	height: 4em;
-	margin: -4em auto 0;
-	text-align: center;
-	a{
-		color: $accent;
-	}	
-}
+// .message-form{
+// 	@include width-80;
+// 	text-align: center;
+// 	div{
+// 		width: 60%;
+// 		margin: 0 auto;
+// 	}
+// 	input[type="text"],
+// 	textarea{
+// 		margin: 15px;
+// 		width: 100%;
+// 		padding: 10px;
+// 	}
+// 	textarea{
+// 		height: 400px;
+// 	}
+// 	input[type="submit"]{
+// 		@include submit-button;
+// 		margin: 5px 0 0 0;
+// 	}
+// }
 
-// flash notices 
+// // message show
 
-.error {
-	@include width-80;
-	text-align: center;
-	margin: 10px auto; 
-	background-color: $accent;
-}
-.success {
-	@include width-80;
-	text-align: center;
-	margin: 10px auto; 
-	background-color: rgba(0,250,154,0.8);
-}
+// .message-show{
+// 	@include width-80;
+// 	text-align: center;
+// 	h4{
+// 		@include submit-button;
+// 		width: 100px;
+// 		margin: 0 auto;
+// 	}
+// }
+
+// // new language form 
+
+// // footer
+
+// .sticky-footer{
+// 	clear: both;
+// 	@include width-80;
+// 	position: relative;
+// 	height: 4em;
+// 	margin: -4em auto 0;
+// 	text-align: center;
+// 	a{
+// 		color: $accent;
+// 	}	
+// }
+
+// // flash notices 
+
+// .error {
+// 	@include width-80;
+// 	text-align: center;
+// 	margin: 10px auto; 
+// 	background-color: $accent;
+// }
+// .success {
+// 	@include width-80;
+// 	text-align: center;
+// 	margin: 10px auto; 
+// 	background-color: rgba(0,250,154,0.8);
+// }

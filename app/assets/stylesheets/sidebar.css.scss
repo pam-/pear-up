@@ -1,0 +1,30 @@
+navbar{
+	position: absolute;
+	top: 0;
+	left: -200px;
+	height: 100%;
+	background: #000;
+	color: #fff;
+	-webkit-transition: 0.5s;
+}
+
+navbar.active{
+	left: 0;
+}
+
+.wrapper{
+	-webkit-transition: 0.5s;
+}
+
+#hamburger{
+	background: #000;
+	color: #fff;	
+	position: absolute;
+	top: 0;
+	left: 20px;
+	z-index: 1;
+}
+
+.wrapper.active{
+	margin-left: 100px;
+}

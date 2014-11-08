@@ -4,4 +4,4 @@ function mapMaker() {
 	map = L.mapbox.map('map', 'pam-.jmeb29bh');
 }
 
-window.onload = mapMaker;
+// window.onload = mapMaker;

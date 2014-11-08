@@ -9,18 +9,18 @@
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
-	<div class="wrapper">
 		<%= render 'layouts/header' %>
-
+	<div class="wrapper">
+		<p id="hamburger">&#9776;</p>
 		<%= yield %>
-		
+
 		<div class="push"></div>
 	</div>
 
 	<div class="sticky-footer">
 		<%= render 'layouts/footer' %>
 	</div>
-	
+
   <%= javascript_include_tag 'application' %>
 </body>
 </html>
