@@ -14,9 +14,15 @@ $accent: rgba(255, 0,0,0.7);
 	-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 3px 0px 0px #C40202, 0px 8px 5px #999;
 }
 
+@mixin marker{
+	display: inline-block;
+	width: 10px; height: 10px;
+	border-radius: 50% 50% 50% 0;
+	-webkit-transform: rotate(-45deg);
+}
+
 html,body {
 	font-family: 'Century Gothic';
-	height: 100%;
 	a{
 		text-decoration: none;
 		color: inherit;
@@ -92,61 +98,62 @@ html,body {
 // 		letter-spacing: 1px;
 // 	}
 	#map{
-		width: 100%;
-		height: 450px;
+		width: 60%;
+		height: 510px;
+		float: right;
+		margin-top: 40px;
+		margin-right: 48px;
 	}
-// 	aside{
-// 		position: absolute;
-// 		z-index: 1;
-// 		right: 0;
-// 	}
+	aside{
+		float: left;
+		z-index: 1;
+		margin-left: 80px;
+		margin-top: 40px;
+		width: 20%;
+		h3{
+			margin: 0;
+			margin-left: 20px;
+		}
+		input{
+			margin-left: 20px;
+			margin-bottom: 20px;
+			display: inline-block;
+		}
+		ul{
+			width: 80%;
+			li{
+				cursor: pointer;
+				margin: 20px;
+				padding-top: 10px;
+			}
+		}
+	}
 
-// 	#ruby{
-// 		color: #fff;
-// 		background-color: rgba(255,0,0,0.8);
-// 		-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 5px 0px 0px #C40202, 0px 10px 5px #999;
-// 	}
-// 	#ruby:active{
-// 		top: 3px;
-// 		-webkit-box-shadow: inset 0px 0px 0px #C40202, 0px 2px 0px 0px #C40202, 0px 5px 3px #999; 
-// 	}
-// 	#python{
-// 		color: #5D87E8;
-// 		background-color: rgba(255,255,0,0.6);
-// 		-webkit-box-shadow: inset 0px 0px 0px #C2AD11, 0px 5px 0px 0px #C2AD11, 0px 10px 5px #999;
-// 	}
-// 	#python:active{
-// 		top: 3px;
-// 		-webkit-box-shadow: inset 0px 0px 0px #C2AD11, 0px 2px 0px 0px #C2AD11, 0px 5px 3px #999; 
-// 	}
-// 	#html5{
-// 		color: #000;
-// 		background-color: rgba(255,69,0,0.8);
-// 		-webkit-box-shadow: inset 0px 0px 0px #DB3B00, 0px 5px 0px 0px #DB3B00, 0px 10px 5px #999;
-// 	}
-// 	#html5:active{
-// 		top: 3px;
-// 		-webkit-box-shadow: inset 0px 0px 0px #DB3B00, 0px 2px 0px 0px #DB3B00, 0px 5px 3px #999; 
-// 	}	
-// 	#css3{
-// 		color: #fff;
-// 		background-color: rgba(0,191,255,0.8);
-// 		-webkit-box-shadow: inset 0px 0px 0px #008DBD, 0px 5px 0px 0px #008DBD, 0px 10px 5px #999;
-// 	}
-// 	#css3:active{
-// 		top: 3px;
-// 		-webkit-box-shadow: inset 0px 0px 0px #008DBD, 0px 2px 0px 0px #008DBD, 0px 5px 3px #999; 
-// 	}
-// 	#rails{
-// 		color: #fff;
-// 		background-color: rgba(199,0,0,0.8);
-// 		-webkit-box-shadow: inset 0px 0px 0px #A80000, 0px 5px 0px 0px #A80000, 0px 10px 5px #999;
-// 	}
-// 	#rails:active{
-// 		top: 3px;
-// 		-webkit-box-shadow: inset 0px 0px 0px #A80000, 0px 2px 0px 0px #A80000, 0px 5px 3px #999; 
-// 	}
-// }
+#ruby{
+	@include marker;
+	background-color: rgba(255,0,0,0.8);
+}
+
+#python{
+	@include marker;
+	background-color: rgba(255,255,0,0.6);
+}
+
+#html5{
+	@include marker;
+	background-color: rgba(255,69,0,0.8);
+}
+
+#css3{
+	@include marker;
+	background-color: rgba(0,191,255,0.8);
+}
+
+#rails{
+	@include marker;
+	background-color: rgba(199,0,0,0.8);
+}
+
 
 // // user show page 
 

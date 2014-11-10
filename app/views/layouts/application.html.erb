@@ -3,6 +3,7 @@
 <head>
 
   <title>Pears</title>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet'/>
  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,10 +12,11 @@
 <body>
 		<%= render 'layouts/header' %>
 	<div class="wrapper">
+
 		<p id="hamburger">&#9776;</p>
+		
 		<%= yield %>
 
-		<div class="push"></div>
 	</div>
 	
   <%= javascript_include_tag 'application' %>
