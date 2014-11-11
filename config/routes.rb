@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   end 
   resources :users_languages, only: [:create, :destroy]
 
-
+  post '/search', to: 'languages#search'
 end

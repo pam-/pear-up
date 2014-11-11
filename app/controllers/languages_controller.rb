@@ -5,6 +5,12 @@ class LanguagesController < ApplicationController
 		@languages = Language.all
 	end
 
+	def search
+		parameters = { term: 'coffee', limit: 10, radius_filter: 16000 }
+		location = params[:location]
+		render json: Yelp.client.search(location, parameters)
+	end
+
 	def show
 		@language = Language.find(params[:id])
 		@users = @language.users

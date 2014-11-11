@@ -3,5 +3,5 @@ $(document).ready(function(){
 		$('navbar').toggleClass('active');
 		$('.wrapper').toggleClass('active');
 	});
-	mapMaker();
+	coffeeFinder();
 })

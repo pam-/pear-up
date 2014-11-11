@@ -6,7 +6,9 @@ function coffeeFinder() {
 	$('form').on('submit', function(evt){
 		evt.preventDefault();
 		var location = $('input').val();
+
 		geocoder.query(location, showMap);
+
 		function showMap(err, data){
 			if(data.lbounds) {
 				map.fitBounds(data.lbounds);
@@ -14,6 +16,11 @@ function coffeeFinder() {
 				map.setView([data.latlng[0], data.latlng[1], 15]);
 			}
 		};
-		// for each element of the language array, show the users with that language and in the area
+		// show coffee shops in the area 
+		// if click can look at people who added that coffee shop for potential meetup spot
+		//can choose to save that spot as well when visits coffee's page??
+		$.post('/search', {location: location}, function(data){console.log(data)})
+
+
 	})
 }
