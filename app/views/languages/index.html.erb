@@ -2,17 +2,18 @@
 <section class="index">
 	<aside>
 		<form>
-			<input type="text" placeholder="20850">
+			<input type="text" placeholder="City, ST">
 		</form>
 
-		<h3> Choose a language: </h3>
-			<ul>
-				<% @languages.each do |language| %>
-						<li class = "lang-button">
-						<div id="<%= language.name.downcase.gsub(' ', '') %>"></div>
-						<%= language.name.upcase %>
-						</li>
+		<h3> Filter by language: </h3>
+		<ul>
+			<% @languages.each do |language| %>
+					<li class = "lang-button">
+					<div id="<%= language.name.downcase.gsub(' ', '') %>"></div>
+					<%= language.name.upcase %>
+					</li>
 			<% end %> 
+		</ul>
 	</aside>
 
 	<div id="map"></div>
