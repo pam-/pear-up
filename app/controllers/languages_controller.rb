@@ -6,7 +6,7 @@ class LanguagesController < ApplicationController
 	end
 
 	def search
-		parameters = { term: 'coffee', limit: 10, radius_filter: 16000 }
+		parameters = { term: 'coffee shop', limit: 16, radius_filter: 6000 }
 		location = params[:location]
 		render json: Yelp.client.search(location, parameters)
 	end

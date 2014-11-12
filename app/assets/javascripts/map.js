@@ -5,6 +5,7 @@ function coffeeFinder() {
 
 	$('form').on('submit', function(evt){
 		evt.preventDefault();
+		$('#coffee-shops').empty();
 		var location = $('input').val();
 
 		geocoder.query(location, showMap);
@@ -19,8 +20,24 @@ function coffeeFinder() {
 		// show coffee shops in the area 
 		// if click can look at people who added that coffee shop for potential meetup spot
 		//can choose to save that spot as well when visits coffee's page??
-		$.post('/search', {location: location}, function(data){console.log(data)})
-
-
+		$.post('/search', 
+			{location: location}, 
+			function(data){
+				// console.log(data.businesses)
+				showCoffee(data.businesses)
+			}
+		);
 	})
+}
+
+function showCoffee(businesses){
+	for (var i = 0; i < businesses.length; i++) {
+		var business = businesses[i];
+		$('#coffee-shops').append(formatter(business));
+	};
+}
+
+function formatter(business){
+	console.log(business);
+	return '<div><p>' + business.name + '</p> </div>'
 }
