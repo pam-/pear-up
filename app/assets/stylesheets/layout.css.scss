@@ -18,6 +18,7 @@ $accent: rgba(255, 0,0,0.7);
 	display: inline-block;
 	width: 10px; height: 10px;
 	border-radius: 50% 50% 50% 0;
+	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 }
 
